@@ -12,7 +12,7 @@ const Datalist: React.FC = () => {
         ()=>{
             function setAvailable(): any {
                 let toAdd: string[] = []
-                getAPI(' https://pokeapi.co/api/v2/pokemon?limit=151&offset=0')
+                getAPI('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0')
                     .then((res: any) => {
                         const response = res.results
                         response.forEach((name: any) => {toAdd.push(name.name)})
@@ -31,7 +31,7 @@ const Datalist: React.FC = () => {
 
     return(
         <datalist id='available_pokemons'>
-            {available?.map((pokemon: string, index: number) => {return <option key={`${pokemon}${index}`} value={pokemon}>{pokemon}</option>})}
+            {available?.map((pokemon: string, index: number) => {return <option key={`${pokemon}${index}`} value={pokemon} />})}
         </datalist>
     )
 }

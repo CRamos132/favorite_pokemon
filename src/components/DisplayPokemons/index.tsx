@@ -1,17 +1,24 @@
 import React from 'react'
 
 import { useSelector } from 'react-redux'
+import Miniature from '../Miniature'
+import styled from 'styled-components'
 
-function DisplayPokemons() {
+const MiniContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
+
+const DisplayPokemons: React.FC = () => {
 
     const pokemons = useSelector((state: any) => state.favoriteReducer.favoritePokemon)
 
     return (
         <>
-            <h1>Pokemons favoritos</h1>
-            <ul>
-                {pokemons.map((pokemon: string, index: number) => <li key={`${pokemon}${index}`}>{pokemon}</li>)}
-            </ul>
+            <h1>Favorite Pokémon</h1>
+            <MiniContainer>
+                {pokemons.map((pokemon: string, index: number) => <Miniature key={`${pokemon}${index}`} name={pokemon} />)}
+            </MiniContainer>
         </>
     )
 }
