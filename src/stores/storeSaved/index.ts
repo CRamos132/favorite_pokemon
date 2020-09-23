@@ -6,7 +6,7 @@ import ActionCurrentPokemon from '../../interfaces/ActionCurrentPokemon';
 import ActionAvailablePokemon from '../../interfaces/ActionAvailablePokemon';
 
 const INITIAL_STATE: StatePokemon  = {
-    favoritePokemon: ['Bulbasaur', 'Porygon'],
+    favoritePokemon: [],
     currentPokemon: '',
     availablePokemon: ['Não foi possível obter sugestões']
 };
