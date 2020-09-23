@@ -1,5 +1,6 @@
 # Projeto de Pokémons favoritos
 
+Projeto disponível para visualização em https://favorite-pokemon.vercel.app/
 O projeto  um site de cadastro de Pokémons favoritos que utiliza [uma API](https://pokeapi.co/) para puxar Pokémons da primeira geração 
 e foi desenvolvido em ReactJS com Redux.
 
